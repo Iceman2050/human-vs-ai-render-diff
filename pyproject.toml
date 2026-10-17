@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "human-vs-ai-render-diff"
+version = "1.0.0"
+description = "Render what a human sees vs. what an AI ingests from an HTML email, and diff the two."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Ingenious AI" }]
+keywords = ["email", "security", "prompt-injection", "ai-safety", "phishing"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Security",
+]
+dependencies = []  # stdlib only — zero third-party dependencies
+
+[project.scripts]
+hvaird = "human_vs_ai_render_diff.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
